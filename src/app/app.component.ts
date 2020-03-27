@@ -27,7 +27,7 @@ export class AppComponent {
     this.store.dispatch({ type: 'SPANISH' });
   }
   changetoFrench() {
-    this.store.dispatch({ type: '' });
+    this.store.dispatch({ type: 'FRENCH' });
   }
 
 
