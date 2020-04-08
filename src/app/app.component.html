@@ -1,12 +1,15 @@
-App Works!!
-
+<h1>App Works!!</h1>
 
 {{message$ | async}}
 
 <button (click)="changetoSpanish()">Spanish</button>
 <button (click)="changetoFrench()">French</button>
 
-<app-counter></app-counter>
+<div *ngFor="let i of count">
+    {{i}} from parent
+</div>
+<br />
+<app-counter [count]="count"></app-counter>
 
 <app-shopping-items> </app-shopping-items>
 <router-outlet></router-outlet>

@@ -1,7 +1,8 @@
 <!-- <p>counter works!</p> -->
 
-<p>Number: {{count}}</p>
-
+<div *ngFor="let i of count">
+    Number: {{i}} from child
+</div>
 
 <button (click)="IncrementCount()">Increment</button>
 <button (click)="DecrementCount()">Decrement</button>

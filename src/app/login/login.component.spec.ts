@@ -20,6 +20,7 @@ describe('LoginComponent', () => {
   });
 
   it('should create', () => {
+    // spyOn(authService, 'isAuthenticated').and.returnValue(Promise.resolve(true)); (3)
     expect(component).toBeTruthy();
   });
 });

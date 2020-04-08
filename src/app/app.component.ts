@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 
@@ -12,9 +12,9 @@ interface AppState {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'AngularTesting';
-
+  count = [];
   message$: Observable<string>;
 
   constructor(private store: Store<AppState>) {
@@ -23,11 +23,18 @@ export class AppComponent {
 
   }
 
+  ngOnInit(): void {
+    this.count.push(1);
+  }
+
   changetoSpanish() {
     this.store.dispatch({ type: 'SPANISH' });
+    this.count.push(1);
+
   }
   changetoFrench() {
     this.store.dispatch({ type: 'FRENCH' });
+    this.count.push(-1);
   }
 
 
